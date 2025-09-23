@@ -1,0 +1,145 @@
+:root{font-family:Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;line-height:1.5;font-weight:400;color-scheme:light dark;color:#ffffffde;background-color:#242424;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}a{font-weight:500;color:#646cff;text-decoration:inherit}a:hover{color:#535bf2}body{margin:0;display:flex;place-items:center;min-width:320px;min-height:100vh}h1{font-size:3.2em;line-height:1.1}#app{max-width:1280px;margin:0 auto;padding:2rem;text-align:center}.logo{height:6em;padding:1.5em;will-change:filter;transition:filter .3s}.logo:hover{filter:drop-shadow(0 0 2em #646cffaa)}.logo.vanilla:hover{filter:drop-shadow(0 0 2em #f7df1eaa)}.card{padding:2em}.read-the-docs{color:#888}button{border-radius:8px;border:1px solid transparent;padding:.6em 1.2em;font-size:1em;font-weight:500;font-family:inherit;background-color:#1a1a1a;cursor:pointer;transition:border-color .25s}button:hover{border-color:#646cff}button:focus,button:focus-visible{outline:4px auto -webkit-focus-ring-color}@media (prefers-color-scheme: light){:root{color:#213547;background-color:#fff}a:hover{color:#747bff}button{background-color:#f9f9f9}}.embla{overflow:hidden}.embla__container{display:flex}
+.font-gradient {
+    background: linear-gradient(
+      to right bottom,
+      #fff 30%,
+      hsla(0, 0%, 100%, 0.5)
+    );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: unset;
+  }
+  .canvas-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 20px;
+    z-index: 1;
+    margin: auto;
+  }
+  @media (min-width: 1025px) {
+    .canvas-container canvas {
+      margin-left: auto;
+    }
+  }
+
+  .rainbowBorder {
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #02fcef70, #ffb52b70 50%, #a02bfe70);
+    height: 32px;
+    line-height: 0;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: 0 100%;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .nav-link {
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #646cff;
+  }
+  
+  .button-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .button-hover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+  
+  .social-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .social-hover:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #02fcef20, #ffb52b20, #a02bfe20);
+  }
+
+  .rainbowBorder span {
+    line-height: 1;
+    margin: 1px;
+    border-radius: 9999px;
+    width: calc(100% - 2px);
+    height: calc(32px - 2px);
+    background-color: #0b0e14;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    font-family: "Main", "Open Sans", sans-serif;
+  }
+
+  body {
+    display: flex;
+    gap: 15px;
+    color: rgba(252, 253, 255, 0.937);
+    font-family: "Open Sans", sans-serif;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+
+  .god-rays-wrapper {
+    position: absolute;
+    left: 60%;
+    top: 40%;
+    transform: translate(-50%, -50%) rotate(-50deg);
+    z-index: 0;
+    width: 100%;
+    height: 350px;
+    filter: blur(90px);
+    pointer-events: none;
+  }
+  /* set left and top to 0 for mobile devices */
+  @media (max-width: 768px) {
+    .god-rays-wrapper {
+      left: 0;
+      top: 0;
+    }
+  }
+  /* hide the god-rays and canvas-container for devices with a width less than 1200px */
+  @media (max-width: 1200px) {
+    .god-rays-wrapper {
+      display: none;
+    }
+    .canvas-container {
+      display: none;
+    }
+  }
+  
+  .god-rays {
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.15;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)
+    );
+    mix-blend-mode: screen;
+  }
